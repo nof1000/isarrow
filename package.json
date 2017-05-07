@@ -1,6 +1,6 @@
 {
   "name": "isarrow",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Checks whether a value is an arrow function",
   "main": "index.js",
   "author": "Denis Maslennikov <mrdenniska@gmail.com> (nofach.com)",
