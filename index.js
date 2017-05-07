@@ -12,6 +12,14 @@
  */
 module.exports = (fn) => {
     if (typeof(fn) === 'function') {
+        if (Object.prototype.toString.call(fn) === '[object AsyncFunction]') {
+            if (Object.toString.call(fn).match(/^async \(?.*\)? \=\>/i)) {
+                return true;
+            }
+
+            return false;
+        }
+
         if (!fn.prototype) {
             try {
                 fn.arguments && fn.caller;
